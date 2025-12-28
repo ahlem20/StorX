@@ -1,0 +1,125 @@
+.create-user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.create-user-page.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.language-switcher button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.language-switcher button:hover {
+  background: #f0f0f0;
+}
+.language-switcher button.active {
+  background: #007aff;
+  color: #fff;
+  border-color: #005bb5;
+}
+
+/* Card */
+.create-user-card {
+  background: #fff;
+  padding: 28px 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  max-width: 400px;
+  width: 100%;
+}
+
+.create-user-card h2 {
+  margin-bottom: 22px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #007aff;
+}
+
+/* Form */
+.create-user-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create-user-card input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.create-user-card input:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 4px 12px rgba(0,122,255,0.15);
+}
+
+.create-user-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #007aff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-user-card button:hover {
+  background: #005bb5;
+}
+
+.error {
+  color: #d43f3a;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.success {
+  color: #2e7d32;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.link {
+  color: #007aff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* RTL inputs/buttons */
+.create-user-page.rtl input,
+.create-user-page.rtl button,
+.create-user-page.rtl .link {
+  text-align: right;
+}

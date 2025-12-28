@@ -1,0 +1,177 @@
+/* Full-screen gradient background with animation */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4b006e, #1d2671, #2e4eff, #4b006e);
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+  padding: 20px;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Right-to-left support for Arabic */
+.rtl {
+  direction: rtl;
+}
+
+/* Glass card for login & signup */
+.auth-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+  padding: 40px 60px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  max-width: 450px;
+  width: 90%;
+  animation: fadeIn 1.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.auth-card input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 0; /* remove margin-bottom */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box; /* ensures padding doesn't increase total width */
+}
+
+.auth-card input + input {
+  margin-top: 15px; /* spacing between inputs only */
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px; /* fixed space above button */
+  border-radius: 15px;
+  border: none;
+  background: #ffd700;
+  color: #1d2671;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-card button:hover {
+  background: #ffec70;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.auth-card .error {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Language selector for auth pages */
+.lang-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.lang-menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 8px 0 0 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.lang-menu li {
+  padding: 8px 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.25s ease;
+}
+
+.lang-menu li:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Sign up / login prompt link */
+.auth-card .link {
+  color: #ffd700;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-card .link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 25px 20px;
+  }
+
+  .auth-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .auth-card input {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .auth-card button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .lang-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
